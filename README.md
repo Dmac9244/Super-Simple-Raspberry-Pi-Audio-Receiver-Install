@@ -1,12 +1,14 @@
-# Super Simple Raspberry Pi Audio Receiver Install 
+This is a version of BaReinhard's Super-Simple-Raspberry-Pi-Audio-Receiver-Install that fixes a couple problems I found. Bluetooth audio wasn't working with my sound card, so I found the problem and fixed it. Doing that caused a problem with AirPlay that I also fixed. The branch fix-bluetooth-hifiberry fixes all these problems, while everything else is preserved as it was (except for this message) everywhere else. So, to download, get the fix-bluetooth-hifiberry branch!
+
+# Super Simple Raspberry Pi Audio Receiver Install
 ### Looking for Devs to Help Support/Futher This Project
 ### This install has replaced [Raspberry Pi Audio Receiver Install Car Version](https://github.com/BaReinhard/Raspberry-Pi-Audio-Receiver-Install-Car-Install), [Raspberry Pi Audio Receiver Install Home Version](https://github.com/BaReinhard/Raspberry-Pi-Audio-Receiver-Install), and [Network Without Internet](https://github.com/BaReinhard/Network-Without-Internet). The new version allows for the Installation Package of Home, Car, Network Without Internet, and a custom Installation (where you choose what portions of the project you want installed)
-This project has combined several different projects into one, culminating into a plug-and-play Audio Receiver project. It incorporates A2DP, AirPlay, and Auxillary line input as possible ways to stream music to your Raspberry Pi. When paired with a sound card or HiFi audio DAC, with the exception of Aux Line Input, you get high quality stereo audio. 
+This project has combined several different projects into one, culminating into a plug-and-play Audio Receiver project. It incorporates A2DP, AirPlay, and Auxillary line input as possible ways to stream music to your Raspberry Pi. When paired with a sound card or HiFi audio DAC, with the exception of Aux Line Input, you get high quality stereo audio.
 ## Changes
 * Use of External Soundcards
 * soxr interpolation with shairport-sync, works well on Raspberry Pi Zero and Raspberry Pi 3, haven't tested on any other boards yet.
 * Works great with Sabrent USB Sound Card, HifiBerry Amp+ (I would not recommend this in a car), and will shortly be testing this with a HifiBerry DAC+ Pro.
-* Creates Internet-less Wireless Network (Setup as an AP) to allow users to connect to the network and use AirPlay 
+* Creates Internet-less Wireless Network (Setup as an AP) to allow users to connect to the network and use AirPlay
 * Allows for Bluetooth A2DP, AirPlay, and local files played through Kodi.
 * Uses kodi as a GUI, and supports the use of sound cards.
 * Supports Infrared remotes, currently setup for the [Matricom IR Remote.](https://www.amazon.com/Quality-Replacement-Controller-Android-Matricom/dp/B018K0GR12)
@@ -25,7 +27,7 @@ This project has combined several different projects into one, culminating into 
 * Raspberry Pi Zero will need a WiFi card to use the new Access Point feature, some cards are not compatible with hostapd right out of the box and may require a forked repo of hostapd. If you are using a tp-link usb adapter you can follow the guide here to fix how the current install feature has set this up. GUIDE: [Pi Zero hostapd Fix](https://bareinhard.github.io/2017/02/15/Fix-hostapd-Raspberry-Pi-Zero.html)
 * Raspberry Pi Zero W (new Model with Bluetooth and Wireless built-in) is likely supported and will work, testing will begin once I receive the new board (Should arrive this week). However, since the Raspberry Pi Foundation has stated the following, I see no reason why it wouldn't work with hostapd as expected.
 
-> It uses the same Cypress CYW43438 wireless chip as Raspberry Pi 3 Model B to provide 802.11n wireless LAN and Bluetooth 4.0 connectivity. 
+> It uses the same Cypress CYW43438 wireless chip as Raspberry Pi 3 Model B to provide 802.11n wireless LAN and Bluetooth 4.0 connectivity.
 
 ## Install
 #### This will install on the latest Raspbian Jessie, with just the following commands.
@@ -65,6 +67,6 @@ Device WiFi Password: Choose Password (Depending on Install)
 9. USB Sound Card
 10. JustBoom DAC and AMP Cards
 11. JustBoom Digi Cards
-	
-Which Sound Card are you using? (0/1/2/3/4/5/6/7/8/9/10/11) :  Sound Card Choice 
+
+Which Sound Card are you using? (0/1/2/3/4/5/6/7/8/9/10/11) :  Sound Card Choice
 ```
